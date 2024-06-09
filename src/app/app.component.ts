@@ -14,16 +14,16 @@ import { DUMMY_USERS } from './dummy-users';
 })
 export class AppComponent {
   users = DUMMY_USERS;
-  selectedUser = '';
+  selectedUser?: string;
 
   findUserById = (id: string) => {
     return DUMMY_USERS.find((e) => {
       return e.id === id;
-    })!;
+    });
   };
 
   onSelectUser(id: string) {
-    this.selectedUser = this.findUserById(id).name;
+    this.selectedUser = this.findUserById(id)?.name;
     console.log(id);
   }
 }
