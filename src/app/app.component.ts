@@ -1,16 +1,10 @@
 import { Component } from '@angular/core';
 
-
 import { HeaderComponent } from './header/header.component';
 import { UserComponent } from './user/user.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { DUMMY_USERS } from './dummy-users';
-
-interface User {
-  id: string;
-  name: string;
-  avatar: string;
-}
+import { User } from './user/user.model';
 
 @Component({
   selector: 'app-root',
