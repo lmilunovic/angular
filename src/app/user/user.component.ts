@@ -12,6 +12,7 @@ export class UserComponent {
   //Angular 2 way:
 
   @Input({required: true}) user!: User;
+  @Input({required:true}) selected!: boolean;
   @Output() select = new EventEmitter();
 
   get imagePath() {
