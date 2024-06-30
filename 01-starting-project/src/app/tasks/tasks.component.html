@@ -13,7 +13,7 @@
     }
   </ul>
 
-  @if(addTaskClicked){
-    <app-add-task> </app-add-task>
+  @if(isAddingTask){
+    <app-add-task (cancel)="oCancelAddTask()"> </app-add-task>
   }
 </section>
